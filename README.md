@@ -12,9 +12,25 @@
 
 ```text
 文件：install-school-printer.zip
-大小：276319260 字节
+大小：276M 字节
 SHA-256：3CDB1F5E10269BFFBBC2817F2B159365C9E4B44DA1EB411779D181033C947B7A
 ```
-
 解压后需要保留完整的 `install-school-printer/` 目录，不能只复制 `SKILL.md`。
+
+不能直接把 ZIP 丢给 Codex 就使用。当前这个文件是一个 Codex Skill，需要先解压并放到 Codex 的 Skill 目录。
+Windows：
+%USERPROFILE%\.codex\skills\install-school-printer\
+macOS：
+~/.codex/skills/install-school-printer/
+解压后目录结构必须类似：
+install-school-printer/
+├── SKILL.md
+├── agents/
+├── assets/
+├── scripts/
+└── references/
+然后重新打开 Codex，在对话中输入：
+使用 $install-school-printer 安装打印机，IP 是 192.168.1.100(例)
+不要只复制 SKILL.md，因为驱动和脚本都在 assets/、scripts/ 中。
+另外要注意：当前 ZIP 是 Codex Skill，不是独立的“双击安装程序”。
 
